@@ -1,0 +1,36 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+body {
+  background-color: white;
+}
+.navbar {
+  background-color: #F8F9FA;
+}
+
+.card {
+  border-radius: 4px;
+  margin: 8px;
+  height: 240px;
+}
+
+.card-top {
+  height: 160px;
+  color: black;
+}
+
+.card-bottom {
+  height: 80px;
+}
+

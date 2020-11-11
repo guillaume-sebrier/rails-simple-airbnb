@@ -21,19 +21,12 @@ class FlatsController < ApplicationController
   def edit
   end
 
-  # POST /flats
-  # POST /flats.json
   def create
     @flat = Flat.new(flat_params)
-
-    respond_to do |format|
-      if @flat.save
-        format.html { redirect_to @flat, notice: 'Flat was successfully created.' }
-        format.json { render :show, status: :created, location: @flat }
-      else
-        format.html { render :new }
-        format.json { render json: @flat.errors, status: :unprocessable_entity }
-      end
+    if @flat.save
+      redirect_to flats_path, notice: 'Flat was successfully created.'
+    else
+      render :new
     end
   end
 
